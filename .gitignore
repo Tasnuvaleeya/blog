@@ -1,0 +1,15 @@
+.bin
+.include
+.migrations
+.lib
+.pip-selfcheck.json
+.share
+.lib64
+.pyvenv.cfg
+shahriar_blog/migrations
+db.sqlite3
+.idea
+*.pyc
+*~
+.DS_Store
+static_server

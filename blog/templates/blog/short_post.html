@@ -1,0 +1,20 @@
+<article class="post">
+    <div>
+        <a href="{% url 'post-detail' pk=post.id %}" class="post-title"><h2>{{ post.title }}</h2></a>
+        <p class="post-date">
+            <i aria-hidden="true" class="fa fa-calendar"></i>&nbsp;
+            {{ post.published_on | date:'M d, Y' }}</p>
+        <div class="article-content">
+            {% if post.short_description %}
+            <p>{{ post.short_description }}</p>
+            {% else %}
+            {{ post.body }}
+            {% endif %}
+        </div>
+    </div>
+
+    <a href="{% url 'post-detail' pk=post.id %}" class="read-more">
+        Read More
+        <i aria-hidden="true" class="fa fa-arrow-right"></i>
+    </a>
+</article>

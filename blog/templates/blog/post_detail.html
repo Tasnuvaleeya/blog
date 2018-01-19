@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+{% block title %}{{ post.title }} | Shahariar's Blog {% endblock %}
+
+{% block content %}
+
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+          <p>
+            <div>
+                <a href="/" class="post-title"><h2>{{ post.title }}</h2></a>
+                <div class="article-content">
+                    {{ post.body |safe }}
+
+                </div>
+            </div>
+            <a href="{% url 'post-list' %}" class="read-more">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Previous
+            </a>
+            </p>
+        </div>
+    </div>
+
+
+
+{% endblock %}

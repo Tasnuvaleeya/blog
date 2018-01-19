@@ -1,0 +1,61 @@
+
+{% load staticfiles %}
+
+<nav class="navbar navbar-default fixed-top" id="mainNav" style="text-align: center;">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--<a class="navbar-brand" href="{% url 'post-list' %}">Shahriar</a>-->
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav" id = "item-list">
+
+                <li><a href="{% url 'post-list' %}">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="{% url 'post-about' %}">About</a></li>
+                <li><a href="{% url 'sample-post' %}">Sample Post</a></li>
+                <li><a href="{% url 'contact-view' %}">Contact</a></li>
+
+            </ul>
+
+
+
+            <!--<ul class="nav navbar-nav navbar-right">-->
+
+                <!--<li><a href="https://www.facebook.com/" class="icons-sm fb-ic"><i class="fa fa-facebook fa-lg white-text mr-md-4"> </i></a></li>-->
+
+                <!--<li><a href="https://twitter.com/shahriar_siddik" class="icons-sm tw-ic"><i class="fa fa-twitter fa-lg white-text mr-md-4"> </i></a></li>-->
+
+                <!--<li><a href="https://plus.google.com/u/1/+ShahriarSiddik" class="icons-sm gplus-ic"><i class="fa fa-google-plus fa-lg white-text mr-md-4"> </i></a></li>-->
+
+                <!--<li><a href="https://www.linkedin.com/in/shahriar-siddik" class="icons-sm li-ic"><i class="fa fa-linkedin fa-lg white-text mr-md-4"> </i></a></li>-->
+
+                <!--<li><a href="https://www.instagram.com/shahriar.siddik/" class="icons-sm ins-ic"><i class="fa fa-instagram fa-lg white-text mr-md-4"> </i></a></li>-->
+                <!--<li><a href="https://github.com/shahriarsiddik" class="icons-lg git-ic"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a></li>-->
+
+            <!--</ul>-->
+
+        </div><!-- /.navbar-collapse -->
+        <!--<div class="page-footer" id ="footer-blog">-->
+        <!---->
+        <!--</div>-->
+    </div><!-- /.container-fluid -->
+
+</nav>
+
+<script>
+    $(function () {
+        console.log('ready');
+        $('#item-list > li').click(function (e) {
+//            e.preventDefault()
+            $that = $(this);
+            $that.parent().find('li').removeClass('active');
+            $that.addClass('active');
+        })
+    })
+</script>

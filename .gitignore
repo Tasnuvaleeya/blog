@@ -6,7 +6,7 @@
 .share
 .lib64
 .pyvenv.cfg
-shahriar_blog/migrations
+blog/migrations
 db.sqlite3
 .idea
 *.pyc
